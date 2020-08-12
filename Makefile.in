@@ -1,8 +1,15 @@
 COMPILER := gcc
 FLAGS := -fPIC -c src/bgl.cpp
 
-build:
-     mv src/include/BGL/bgl.hpp src/bgl.cpp
+setready:
+     @mv src/include/BGL/bgl.hpp src/bgl.cpp
 
 install:
      ${COMPILER} ${FLAGS}
+ 
+cleanup:
+     @mv src/bgl.o bgl.o
+
+all: setready install cleanup
+
+.DEFAULT_GOAL := all
