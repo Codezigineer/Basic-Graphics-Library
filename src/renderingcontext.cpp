@@ -1,2 +1,2 @@
-void RenderingContext::beginPath() {}
-void RenderingContext::endPath() {}
+void gl::RenderingContext::beginPath() {}
+void gl::RenderingContext::endPath() {}
